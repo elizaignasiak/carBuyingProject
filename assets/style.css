@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  background-color: #ededede9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-inline: calc(1.5rem * 0.5);
+  margin: 0 auto;
+}
+
+.searchBox {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.searchBox .searchInput {
+  width: 30%;
+  height: 50px;
+  border: 1px solid #59035C;
+  border-radius: 20px;
+  padding: 0 15px;
+  outline: none;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.car {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 16px;
+  padding: 32px 0;
+  width: calc(50% - 0.5rem);
+  border: 0.5px solid #59035C;
+  border-radius: 5px;
+}
+
+.car .imgBox {
+  width: 50%;
+  padding: 8px;
+}
+
+.car .img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.car .carDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.car button {
+  width: 50%;
+  border: 1px solid #310F2F;
+  border-radius: 10px;
+  background-color: #59035C;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.car button:hover {
+  background-color: #89A944;
+}
+
+#formPage {
+  display: none;
+  padding: 60px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #59035C;
+}
+
+.orderData {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-size: 20 px;
+  margin-top: 60px;
+}
+
+#formPage form {
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+form .buyerInfo input,
+select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+form .payment {
+  display: flex;
+  gap: 16px;
+}
+
+form .buyerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form .accessories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form .formBtns {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+form .formBtns button,
+.backBtn {
+  border: 1px solid #310F2F;
+  border-radius: 10px;
+  background-color: #59035C;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+form .formBtns button:hover,
+.backBtn {
+  background-color: #89A944;
+}
+
+#thanksPage {
+  padding-top: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.imgTag {
+  width: 70%;
+  margin-bottom: 32px;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

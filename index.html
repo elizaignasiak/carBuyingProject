@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>carBuyingProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="mainPage">
+        <div class="searchBox">
+          <label class="">Search for your car </label>
+          <input type="search" class="searchInput" placeholder="E.g. BMW..."/>
+        </div>
+        <div class="products">
+          <div
+            class="car"
+            data-brand="Audi"
+            data-model="a3"
+            data-year="2015"
+            data-engine="160"
+            data-milage="67000"
+            data-price="50000"
+            data-img="audi.jpg">
+            <div class="imgBox">
+              <img src="images/audi.jpg" class="img" />
+            </div>
+            <div class="carDetails">
+              <h4>Audi</h4>
+              <p>Model: A3</p>
+              <p>Year: 2015</p>
+              <p>Engine power: 160 KM</p>
+              <p>Mileage: 67 000 km</p>
+              <p>Price: 50 000 zł</p>
+              <button class="buyBtn">Buy</button>
+            </div>
+          </div>
+          <div
+            class="car"
+            data-brand="BMW"
+            data-model="X6"
+            data-year="2022"
+            data-engine="625"
+            data-milage="0"
+            data-price="750000"
+            data-img="bmw.jpeg">
+            <div class="imgBox">
+              <img src="images/bmw.jpeg" class="img" />
+            </div>
+            <div class="carDetails">
+              <h4>BMW</h4>
+              <p>Model: X6</p>
+              <p>Year: 2022</p>
+              <p>Engine power: 625 KM</p>
+              <p>Mileage: 0 km</p>
+              <p>Price: 750 000 zł</p>
+              <button class="buyBtn">Buy</button>
+            </div>
+          </div>
+          <div
+            class="car"
+            data-brand="Hyundai"
+            data-model="i20"
+            data-year="2020"
+            data-engine="110"
+            data-milage="35000"
+            data-price="42000"
+            data-img="hyundai.jpeg">
+            <div class="imgBox">
+              <img src="images/hyundai.jpeg" class="img" />
+            </div>
+            <div class="carDetails">
+              <h4>Hyundai</h4>
+              <p>Model: i20</p>
+              <p>Year: 2020</p>
+              <p>Engine power: 110 KM</p>
+              <p>Mileage: 35 000 km</p>
+              <p>Price: 42 000 zł</p>
+              <button class="buyBtn">Buy</button>
+            </div>
+          </div>
+          <div
+            class="car"
+            data-brand="Opel"
+            data-model="Vectra"
+            data-year="2014"
+            data-engine="170"
+            data-milage="189000"
+            data-price="11500"
+            data-img="vectra.jpg">
+            <div class="imgBox">
+              <img
+                src="images/vectra.jpg"
+                class="img"
+              />
+            </div>
+            <div class="carDetails">
+              <h4>Opel</h4>
+              <p>Model: Vectra</p>
+              <p>Year: 2014</p>
+              <p>Engine power: 170 KM</p>
+              <p>Mileage: 189 000 km</p>
+              <p>Price: 11 500 zł</p>
+              <button class="buyBtn">Buy</button>
+            </div>
+          </div>
+          <div
+            class="car"
+            data-brand="Opel"
+            data-model="Astra"
+            data-year="2010"
+            data-engine="150"
+            data-milage="200000"
+            data-price="12000"
+            data-img="opel.jpeg">
+            <div class="imgBox">
+              <img src="images/opel.jpeg" class="img" />
+            </div>
+            <div class="carDetails">
+              <h4>Opel</h4>
+              <p>Model: Astra</p>
+              <p>Year: 2010</p>
+              <p>Engine power: 150 KM</p>
+              <p>Mileage: 200 000 km</p>
+              <p>Price: 12 000 zł</p>
+              <button class="buyBtn">Buy</button>
+            </div>
+          </div>
+          <div
+            class="car"
+            data-brand="Hyundai"
+            data-model="Tuscon"
+            data-year="2021"
+            data-engine="150"
+            data-milage="1000"
+            data-price="99200"
+            data-img="tuscon.jpeg">
+            <div class="imgBox">
+              <img src="images/tuscon.jpg" class="img" />
+            </div>
+            <div class="carDetails">
+              <h4>Hyundai</h4>
+              <p>Model: Tuscon</p>
+              <p>Year: 2021</p>
+              <p>Engine power: 150 KM</p>
+              <p>Mileage: 1000 km</p>
+              <p>Price: 99 200 zł</p>
+              <button class="buyBtn">Buy</button>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div id="formPage">
+        <h1 class="title">Fill up the details:</h1>
+        <div class="orderData">
+          <p>Selected car: <b class="carName"></b></p>
+          <p>Total price: <b class="totalPrice"></b></p>
+        </div>
+
+        <form>
+          <div class="payment">
+            <label for="leasing">Leasing</label>
+            <input
+              type="radio"
+              id="leasing"
+              class="leasingInput"
+              name="payment">
+            <label for="cash">Cash</label>
+            <input type="radio" id="cash" class="cashInput" name="payment">
+          </div>
+
+          <div class="buyerInfo">
+            <label for="name">Name and surname</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="nameInput"
+              placeholder="Name and surname">
+
+            <label for="address">Delivery address</label>
+            <input
+              type="text"
+              id="address"
+              class="addressInput"
+              placeholder="Delivery address">
+
+            <label for="date">Delivery date</label>
+            <select id="date" name="date">
+              <option selected disabled>Select date</option>
+            </select>
+          </div>
+
+          <div class="accessories">
+            <h4 class="title">Choose accesssories: </h4>
+            <div>
+              <input type="checkbox" name="accessory">
+              <label> Mats -
+                <span class="price" data-accprice="200">200 zł</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="accessory">
+              <label> Organizer -
+                <span class="price" data-accprice="150">150 zł</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="accessory">
+              <label> Compressor -
+                <span class="price" data-accprice="230">230 zł</span>
+              </label>
+
+            </div>
+            <div>
+              <input type="checkbox" name="accessory">
+              <label>Charger -
+                <span class="price" data-accprice="100">100 zł</span>
+              </label>
+
+            </div>
+          </div>
+          <div class="formBtns">
+            <button class="backBtn">Go back</button>
+            <button class="submitBtn">Place order</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="thanksPage">
+        <h1 class="title">
+          Thnak you for buying the car: <span class="carName"></span>
+        </h1>
+        <h4 class="title">Total price: <span class="price"></span>
+        </h4>
+        <h4 class="title">
+          Delivery date: <span class="date"></span>
+        </h4>
+        <img class="imgTag" src="" />
+        <button class="backBtn">Go back</button>
+      </div>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
