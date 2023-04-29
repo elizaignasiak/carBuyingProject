@@ -10,7 +10,7 @@ const accessoryCheckboxes = document.querySelectorAll(
   'input[name="accessory"]'
 );
 
-// this function checks on which page we are and displays the correct page so the form data does not delete on refresh
+//check & display the correct page; form data doen't delete on refresh
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("activePage") === "formPage") {
     mainPage.style.display = "none";
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// this function saves the input data as it is typed
+//save the input data
 inputs.forEach((input) => {
   input.addEventListener("change", () => {
     const key = input.id || input.name;
@@ -59,7 +59,7 @@ accessoryCheckboxes.forEach((checkbox) => {
   });
 });
 
-// this is the search form on main page
+//main page - search
 const searchInput = document.querySelector(".searchInput");
 const cars = document.querySelectorAll(".car");
 searchInput.addEventListener("keyup", (e) => {
@@ -76,13 +76,13 @@ searchInput.addEventListener("keyup", (e) => {
   });
 });
 
-// this is the buy now button on main page and this selects the car and pass and saves the data it is also based on your code too
+//main page - buy buttons; select the car, save its data
 const buyNow = document.querySelectorAll(".car");
 buyNow.forEach((car) => {
   const btn = car.children[1].children[6];
   btn.addEventListener("click", () => {
     localStorage.clear();
-    //this will clear if any previous data is selected in browser cache
+   
     inputs.forEach((input) => {
       input.value = null;
       input.checked = false;
@@ -93,7 +93,7 @@ buyNow.forEach((car) => {
       }
     });
 
-    // this is receiving and saving car data
+    //receive & save car data
     const brand = car.dataset.brand;
     const model = car.dataset.model;
     const year = car.dataset.year;
@@ -116,7 +116,7 @@ buyNow.forEach((car) => {
 
     localStorage.setItem("activePage", "formPage");
 
-    // this will display the selected car name and etc on form page
+    //form page - display selected car data 
     carName.innerHTML = `${localStorage.getItem(
       "selectedCarBrand"
     )} ${localStorage.getItem("selectedCarModel")}`;
@@ -124,7 +124,7 @@ buyNow.forEach((car) => {
   });
 });
 
-// this is the data function of form page
+//form page - data 
 const dateSelect = document.querySelector("#date");
 const currentDate = new Date();
 const deliveryDate = new Date(currentDate.getTime() + 14 * 24 * 60 * 60 * 1000);
@@ -143,7 +143,7 @@ deliveryDates.forEach((date) => {
   dateSelect.appendChild(option);
 });
 
-// this is the submit button which verify any empty input and also splits the name in 2 parts
+//place order button; verify inputs
 const submitBtn = document.querySelector(".submitBtn");
 submitBtn.addEventListener("click", () => {
   event.preventDefault();
@@ -189,7 +189,7 @@ submitBtn.addEventListener("click", () => {
   imgTag.src = `images/${localStorage.getItem("selectedCarImg")}`;
 });
 
-// this is the back button on form page and thanks page
+//go back buttons
 const backBtn = document.querySelectorAll(".backBtn");
 backBtn.forEach((backBtn) => {
   backBtn.addEventListener("click", () => {
